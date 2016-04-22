@@ -31,16 +31,76 @@
   <!-- Fav Icon -->
   <link href="{{favicon}}" rel="shortcut icon" type="image/x-icon">
 
+  <link href='https://fonts.googleapis.com/css?family=Exo+2:400,100,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
   <!-- Application CSS Files -->
   {% for cssFile in cssFiles %}<link rel="stylesheet" href="{{cssFile}}">{% endfor %}
 </head>
 
 <body class="ng-cloak">
-  <header ng-include="'/modules/core/client/views/header.client.view.html'" class="navbar navbar-fixed-top navbar-inverse relative-header"></header>
+  <!--<header ng-include="'/modules/core/client/views/header.client.view.html'" class="navbar navbar-fixed-top navbar-inverse lgo-navbar"></header>-->
   <section class="content">
-    <section class="container">
+    <section class="lgo-nav">
+      <h1>LEGION</h1>
+      <ul class="lgo-nav-list" ui-sref-active="active">
+        <li class="lgo-nav-list-item" ui-sref="root.community">
+          <span>Community</span>
+          <i class="material-icons">home</i>
+          <span class="lgo-nav-list-item-tab"></span>
+        </li>
+        <li class="lgo-nav-list-item">
+          <span>Profile</span>
+          <i class="material-icons">account_circle</i>
+          <span class="lgo-nav-list-item-tab"></span>
+        </li>
+        <li class="lgo-nav-list-item">
+          <span>Legions</span>
+          <i class="material-icons">group</i>
+          <span class="lgo-nav-list-item-tab"></span>
+        </li>
+        <li class="lgo-nav-list-item">
+          <span>Games</span>
+          <i class="material-icons">videogame_asset</i>
+          <span class="lgo-nav-list-item-tab"></span>
+        </li>
+        <li class="lgo-nav-list-item">
+          <span>Settings</span>
+          <i class="material-icons">settings</i>
+          <span class="lgo-nav-list-item-tab"></span>
+        </li>
+      </ul>
+      <ul class="lgo-nav-list m-t-3" ui-sref-active="active">
+        <li class="lgo-nav-list-item">
+          <span>Sign-in</span>
+          <span class="lgo-nav-list-item-tab"></span>
+        </li>
+        <li class="lgo-nav-list-item lgo-nav-sec" ui-sref="root.community">
+          <span>Sign-up</span>
+          <span class="lgo-nav-list-item-tab"></span>
+        </li>
+      </ul>
+    </section>
+    <section class="container-full">
       {% block content %}{% endblock %}
     </section>
+  </section>
+
+  <section class="lgo-loader-wrap" ng-if="false">
+    <div class="loader-line"></div>
+    <div class="loader-static"></div>
+
+    <div class="loader">
+      <div class="loader-mask"></div>
+    </div>
+
+    <div class="loader-med">
+      <div class="loader-mask"></div>
+    </div>
+
+    <div class="loader-sm">
+      <div class="loader-mask"></div>
+    </div>
   </section>
 
   <!--Embedding The User Object-->

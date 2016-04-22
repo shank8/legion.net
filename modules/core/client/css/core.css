@@ -1,43 +1,68 @@
-.relative-header{
-  position: relative;
-}
-.undecorated-link:hover {
-  text-decoration: none;
-}
-[ng\:cloak],
-[ng-cloak],
-[x-ng-cloak],
-.ng-cloak,
-.x-ng-cloak {
-  display: none !important;
-}
-.header-profile-image {
-  opacity: 0.8;
-  height: 28px;
-  width: 28px;
-  border-radius: 50%;
-  margin-right: 5px;
-}
-.open .header-profile-image,
-a:hover .header-profile-image {
-  opacity: 1;
-}
-.user-header-dropdown-toggle {
-  padding-top: 11px !important;
-  padding-bottom: 11px !important;
-}
-.user-primary-account {
-  font-size: 30px;
-  top: 10px;
-  right: 10px;
-  position: absolute;
-}
-.error-text {
-  display: none;
-}
-.has-error .help-block.error-text {
-  display: block;
-}
-.has-error .help-inline.error-text {
-  display: inline;
-}
+html {
+  font-size: 12px !important; }
+
+body {
+  font-family: 'Exo 2', sans-serif;
+  background: #1f1f1f;
+  color: #e7e7e7; }
+
+.content {
+  margin-left: 300px; }
+
+.lgo-page {
+  padding: 2rem; }
+
+.lgo-orange {
+  background: #ff7f00; }
+
+section.lgo-nav {
+  height: 100%;
+  min-width: 300px;
+  left: 0;
+  position: fixed;
+  background: #1B1B1B;
+  box-shadow: inset -5px 0px 0px #191919; }
+  section.lgo-nav > * {
+    padding: 1rem; }
+  section.lgo-nav .lgo-nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    border-top: 1px solid #171717;
+    text-transform: uppercase;
+    z-index: 2; }
+    section.lgo-nav .lgo-nav-list .lgo-nav-list-item {
+      padding: 1rem 2rem;
+      font-size: 16px;
+      border-top: 1px solid #1B1B1B;
+      border-bottom: 1px solid #171717;
+      transition: padding-right 200ms linear;
+      position: relative; }
+      section.lgo-nav .lgo-nav-list .lgo-nav-list-item:hover {
+        cursor: pointer;
+        background: #191919;
+        border-top: 1px solid #171717;
+        border-bottom: 1px solid #171717;
+        padding-right: 2.5rem; }
+      section.lgo-nav .lgo-nav-list .lgo-nav-list-item > * {
+        vertical-align: middle; }
+      section.lgo-nav .lgo-nav-list .lgo-nav-list-item .material-icons {
+        margin-left: 1rem; }
+      section.lgo-nav .lgo-nav-list .lgo-nav-list-item .lgo-nav-list-item-tab {
+        position: absolute;
+        right: 0;
+        height: 100%;
+        width: 0;
+        top: 0;
+        background: #ff7f00;
+        transition: width 200ms ease-out;
+        z-index: 1; }
+      section.lgo-nav .lgo-nav-list .lgo-nav-list-item:hover .lgo-nav-list-item-tab {
+        width: .5rem; }
+      section.lgo-nav .lgo-nav-list .lgo-nav-list-item.lgo-nav-sec {
+        background: #ff7f00; }
+        section.lgo-nav .lgo-nav-list .lgo-nav-list-item.lgo-nav-sec .lgo-nav-list-item-tab {
+          background: #fff !important; }
+
+/*# sourceMappingURL=core.css.map */
