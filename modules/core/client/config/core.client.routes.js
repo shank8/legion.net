@@ -27,8 +27,8 @@
     });
 
     $stateProvider
-      .state('home', {
-        url: '/',
+      .state('portal', {
+        url: '/app',
         templateUrl: 'modules/core/client/views/home.client.view.html',
         controller: 'HomeController',
         controllerAs: 'vm'

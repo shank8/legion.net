@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
   <base href="/">
-  <title page-title></title>
+  <title page-title>guild.io</title>
   <meta name="description" content="{{description}}">
   <meta name="fragment" content="!">
 
@@ -42,7 +42,7 @@
   <!--<header ng-include="'/modules/core/client/views/header.client.view.html'" class="navbar navbar-fixed-top navbar-inverse lgo-navbar"></header>-->
   <section class="content">
     <section class="lgo-nav">
-      <h1>LEGION</h1>
+      <h1>GUILD</h1>
       <ul class="lgo-nav-list" ui-sref-active="active">
         <li class="lgo-nav-list-item" ui-sref="root.community">
           <span>Community</span>
@@ -86,22 +86,7 @@
     </section>
   </section>
 
-  <section class="lgo-loader-wrap" ng-if="false">
-    <div class="loader-line"></div>
-    <div class="loader-static"></div>
-
-    <div class="loader">
-      <div class="loader-mask"></div>
-    </div>
-
-    <div class="loader-med">
-      <div class="loader-mask"></div>
-    </div>
-
-    <div class="loader-sm">
-      <div class="loader-mask"></div>
-    </div>
-  </section>
+  <div gd-loader></div>
 
   <!--Embedding The User Object-->
   <script type="text/javascript">

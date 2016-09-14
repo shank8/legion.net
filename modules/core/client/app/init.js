@@ -10,6 +10,29 @@
     .module(app.applicationModuleName)
     .config(bootstrapConfig);
 
+  angular.module(app.applicationModuleName)
+      .run(bootstrapRun);
+
+  function bootstrapRun($rootScope, $timeout){
+
+    $rootScope.$on('$stateChangeSuccess', function(){
+      $timeout(function(){
+        $rootScope.$emit('loader:hide');
+      }, 1000);
+    });
+
+    $rootScope.$on('$stateChangeStart', function(){
+      $rootScope.$emit('loader:show');
+    });
+
+    $rootScope.$on('$stateChangeError', function(){
+
+    });
+
+  }
+
+  bootstrapRun.$inject = ['$rootScope', '$timeout'];
+
   function bootstrapConfig($locationProvider, $httpProvider) {
     $locationProvider.html5Mode(true).hashPrefix('!');
 

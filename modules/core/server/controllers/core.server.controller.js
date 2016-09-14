@@ -28,6 +28,12 @@ exports.renderIndex = function (req, res) {
   });
 };
 
+exports.renderHome = function(req, res){
+  res.render('modules/home/server/views/index', {
+
+  });
+};
+
 /**
  * Render the server error page
  */
